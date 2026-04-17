@@ -109,9 +109,9 @@ while True:
     elif choose=="7":
         name=input("Input name for deleting: ")
         command="""DELETE FROM phonebook WHERE name=%s"""
-        cur.execute(command, (name,))
+        cur.execute(command,(name,))
         conn.commit()
-        print(f"Deleted {cur.rowcount} row(s)")
+        print(f"Deleted ")
     elif choose=="8":
         phone=input("Input phone for deleting: ")
         command="""DELETE FROM phonebook WHERE phone=%s """
