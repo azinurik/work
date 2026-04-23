@@ -5,13 +5,12 @@ from config import DB_HOST, DB_NAME, DB_USER, DB_PASSWORD, DB_PORT
 
 def get_connection():
     try:
-        conn = psycopg2.connect(
+        conn=psycopg2.connect(
             host=DB_HOST,
-            database=DB_NAME,
+            name=DB_NAME,
             user=DB_USER,
-            password=DB_PASSWORD,
-            port=DB_PORT,
-            client_encoding='UTF8'  # исправляем ошибку Unicode
+            pas=DB_PASSWORD,
+            port=DB_PORT
         )
         print("Подключение прошло успешно!")
         return conn
